@@ -9,6 +9,7 @@
     "send_r": "scp -C *.php *.png *.css asmi046@asmi046.myjino.ru:domains/kombinat.asmi-studio.ru/wp-content/themes/souvenir/",
     "send_head": "scp -C header.php asmi046@asmi046.myjino.ru:domains/kombinat.asmi-studio.ru/wp-content/themes/souvenir/",
     "send_func": "scp -C functions.php asmi046@asmi046.myjino.ru:domains/kombinat.asmi-studio.ru/wp-content/themes/souvenir/",
+    "send_index": "scp -C index.php asmi046@asmi046.myjino.ru:domains/kombinat.asmi-studio.ru/wp-content/themes/souvenir/",
     "mk_part_carbon": "ssh asmi046@asmi046.myjino.ru \"mkdir -p domains/kombinat.asmi-studio.ru/wp-content/themes/souvenir/inc\"",
     "send_carbon": "scp -C -r inc asmi046@asmi046.myjino.ru:domains/kombinat.asmi-studio.ru/wp-content/themes/souvenir/",
     "mk_part_dir": "ssh asmi046@asmi046.myjino.ru \"mkdir -p domains/kombinat.asmi-studio.ru/wp-content/themes/souvenir/template-parts\"",
