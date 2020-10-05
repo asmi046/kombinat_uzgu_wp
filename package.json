@@ -7,6 +7,7 @@
     "test": "editorconfig-checker",
     "clear_r": "ssh asmi046@asmi046.myjino.ru \"rm  domains/kombinat.asmi-studio.ru/wp-content/themes/souvenir/*.*\"",
     "send_r": "scp -C *.php *.png *.css asmi046@asmi046.myjino.ru:domains/kombinat.asmi-studio.ru/wp-content/themes/souvenir/",
+    "send_ms": "scp -C *.css asmi046@asmi046.myjino.ru:domains/kombinat.asmi-studio.ru/wp-content/themes/souvenir/",
     "send_head": "scp -C header.php asmi046@asmi046.myjino.ru:domains/kombinat.asmi-studio.ru/wp-content/themes/souvenir/",
     "send_func": "scp -C functions.php asmi046@asmi046.myjino.ru:domains/kombinat.asmi-studio.ru/wp-content/themes/souvenir/",
     "send_index": "scp -C index.php asmi046@asmi046.myjino.ru:domains/kombinat.asmi-studio.ru/wp-content/themes/souvenir/",

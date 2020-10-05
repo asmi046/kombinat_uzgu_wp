@@ -2800,18 +2800,18 @@ a {
   background-position: 0;
   background-size: contain;
   background-image: url(./img/menu_yzor.jpg);
-  /*overflow-y: scroll;*/
+  overflow-y: scroll;
   min-height: 100vh;
   -webkit-box-shadow: inset -10px 0 28px -8px rgba(0, 0, 0, .75);
   box-shadow: inset -10px 0 28px -8px rgba(0, 0, 0, .75)
 }
 .sidebar-catalog::-webkit-scrollbar { width: 3px; height: 3px;}
-.sidebar-catalog::-webkit-scrollbar-button {  background-color: #ffffff; }
+.sidebar-catalog::-webkit-scrollbar-button {  background-color: transparent; }
 .sidebar-catalog::-webkit-scrollbar-track {  background-color: #999;}
-.sidebar-catalog::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+.sidebar-catalog::-webkit-scrollbar-track-piece { background-color:transparent;}
 .sidebar-catalog::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
 .sidebar-catalog::-webkit-scrollbar-corner { background-color: #999;}}
-.sidebar-catalog::-webkit-resizer { background-color: #ffffff;}
+.sidebar-catalog::-webkit-resizer { background-color: transparent;}
 .sidebar-catalog.scroll-to-fixed-fixed {
   height: calc(100vh);
 }
@@ -2839,8 +2839,8 @@ a {
   padding-bottom: 5px
 }
 
-
 .current-cat-parent > a,
+.current-cat > a,
 .sidebar-catalog .cat-item > a:hover,
 .sidebar-catalog .cat-item > a.active {
   background-color: #a51e22;
@@ -2871,6 +2871,7 @@ a {
 }
 
 .sidebar-catalog .current-cat-parent > a:before,
+.sidebar-catalog .current-cat > a:before,
 .sidebar-catalog .cat-item > a:hover:before,
 .sidebar-catalog .cat-item > a.active:before {
 	content:"";
@@ -2880,7 +2881,13 @@ a {
 .sidebar-catalog .cat-item .children a {
 	font-weight: 500;
 	font-size: 14px;
-	padding-left: 0;
+  padding-left: 0;
+} 
+
+.sidebar-catalog .cat-item .children a:hover,
+.sidebar-catalog .cat-item .children .current-cat a {
+  color:#a51e22;
+  background-color: transparent;
 } 
 
 .sidebar-catalog .current-cat-parent .children{
@@ -3130,7 +3137,8 @@ a {
   padding-bottom: 36px;
   background-image: url(./img/podval.jpg);
   color: #fff;
-  width: calc(100vw - 318px);
+  /* width: calc(100vw - 318px); */
+  width: 100%;
   margin-left: auto;
 }
 .footer .logo {
@@ -3467,11 +3475,12 @@ box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.61);
   flex-direction: column;
   justify-content: center;
   -ms-align-items: center;
-  align-items: center;
+  align-items: flex-end;
   height: 100vh;
   left: 0;
   right: 0;
   width: 100%;
+  padding: 0 2%;
   bottom: 120%;
   transition: all .4s ease;
   background-color: #fff;
@@ -3485,7 +3494,7 @@ box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.61);
 .mob-menu .menu {
   text-align: center;
   width: 100%;
-  margin: 14px auto;
+  margin: 25px auto;
 }
 .close-menu {
   width: 30px;
@@ -3932,6 +3941,11 @@ article.page {
     display: block;
     margin-right: 20px;
   }
+
+  .mob-menu .menu a {
+    text-align: right;
+  }
+
   .main-menu .menu {
     display: none;
   }
@@ -3976,6 +3990,13 @@ article.page {
 
   .reviews-slider {
     width: 100%
+  }
+
+  .main-bnr__item{
+    background-position: right;
+  }
+  .main-bnr__title {
+    text-align: right;
   }
 }
 @media screen and (max-width: 1000px) {
